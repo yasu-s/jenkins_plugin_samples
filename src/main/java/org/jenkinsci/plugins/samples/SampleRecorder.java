@@ -2,16 +2,12 @@ package org.jenkinsci.plugins.samples;
 
 import java.io.IOException;
 import java.io.PrintStream;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 import org.jenkinsci.plugins.samples.Messages;
 import org.jenkinsci.plugins.samples.util.Constants;
 import org.kohsuke.stapler.DataBoundConstructor;
 
-import hudson.EnvVars;
 import hudson.Extension;
-import hudson.FilePath;
 import hudson.Launcher;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
@@ -43,6 +39,11 @@ public class SampleRecorder extends Recorder {
 
         PrintStream logger = listener.getLogger();
 
+        // add Action
+        SampleAction act = new SampleAction(build);
+        build.addAction(act);
+
+        // Change Status
         if (Constants.STATUS_SUCCESS.equals(status)) {
             logger.println("SampleRecorder: SUCCESS");
             return true;
