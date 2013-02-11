@@ -1,0 +1,24 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+
+    <f:entry title="${%Status}" field="status">
+        <label>
+            <f:radio name="SampleBuilder.status" value="SUCCESS"
+                     checked="${instance.status == 'SUCCESS' || empty instance.status}" />
+            ${%Status.SUCCESS}
+        </label>
+
+        <label>
+            <f:radio name="SampleBuilder.status" value="UNSTABLE"
+                     checked="${instance.status == 'UNSTABLE'}" />
+            ${%Status.UNSTABLE}
+        </label>
+
+        <label>
+            <f:radio name="SampleBuilder.status" value="FAILURE"
+                     checked="${instance.status == 'FAILURE'}" />
+            ${%Status.FAILURE}
+        </label>
+    </f:entry>
+
+</j:jelly>
