@@ -1,0 +1,11 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <l:layout>
+        <st:include it="${it.build}" page="sidepanel.jelly" />
+        <l:main-panel>
+            urlparam:<st:out value="${it.token}"/><br />
+            SampleReport/index.jelly<br />
+            <a href="aaa">link</a><br />
+            <a href="bbb">link</a>
+        </l:main-panel>
+    </l:layout>
+</j:jelly>

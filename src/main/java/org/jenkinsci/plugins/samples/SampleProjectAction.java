@@ -36,8 +36,4 @@ public class SampleProjectAction implements Action {
     public String getData() {
         return "Sample Project Action!!";
     }
-
-    public void doIndex(final StaplerRequest request, final StaplerResponse response) throws IOException {
-
-    }
 }

@@ -41,7 +41,10 @@ public class SampleRecorder extends Recorder {
         PrintStream logger = listener.getLogger();
 
         // add Action
-        SampleAction act = new SampleAction(build);
+        Action act = new SampleAction(build);
+        build.addAction(act);
+
+        act= new SampleBuildAction(build);
         build.addAction(act);
 
         // Change Status
