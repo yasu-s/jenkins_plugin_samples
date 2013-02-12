@@ -1,5 +1,7 @@
 package org.jenkinsci.plugins.samples;
 
+import org.jenkinsci.plugins.samples.Messages;
+
 import hudson.model.AbstractBuild;
 import hudson.model.Action;
 
@@ -28,6 +30,6 @@ public class SampleAction implements Action {
     }
 
     public String getData() {
-        return "Sample!!";
+        return "Sample Action!!";
     }
 }

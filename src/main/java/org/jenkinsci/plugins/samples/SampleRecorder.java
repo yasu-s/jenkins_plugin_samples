@@ -11,6 +11,7 @@ import hudson.Extension;
 import hudson.Launcher;
 import hudson.model.AbstractBuild;
 import hudson.model.AbstractProject;
+import hudson.model.Action;
 import hudson.model.BuildListener;
 import hudson.model.Result;
 import hudson.tasks.BuildStepDescriptor;
@@ -59,8 +60,13 @@ public class SampleRecorder extends Recorder {
         return true;
     }
 
+    @Override
+    public Action getProjectAction(AbstractProject<?, ?> project) {
+        return new SampleProjectAction(project);
+    }
+
     public BuildStepMonitor getRequiredMonitorService() {
-        return BuildStepMonitor.NONE;
+        return BuildStepMonitor.BUILD;
     }
 
     @Override
