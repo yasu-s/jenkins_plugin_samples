@@ -47,6 +47,9 @@ public class SampleRecorder extends Recorder {
         act= new SampleBuildAction(build);
         build.addAction(act);
 
+        act = new SampleHealthReportingAction(build);
+        build.addAction(act);
+
         // Change Status
         if (Constants.STATUS_SUCCESS.equals(status)) {
             logger.println("SampleRecorder: SUCCESS");
