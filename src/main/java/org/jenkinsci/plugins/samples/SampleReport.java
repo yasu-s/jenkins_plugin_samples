@@ -26,6 +26,9 @@ public class SampleReport implements Serializable  {
     }
 
     public Object getDynamic(String token, StaplerRequest req, StaplerResponse rsp) {
-        return new SampleReport(build, token);
+        if ((token != null) && (token.indexOf("b") >= 0))
+            return new SampleReport2(build, token);
+        else
+            return new SampleReport(build, token);
     }
 }

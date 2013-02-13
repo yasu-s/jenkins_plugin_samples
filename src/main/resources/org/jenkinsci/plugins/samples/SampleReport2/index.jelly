@@ -2,9 +2,8 @@
     <l:layout>
         <st:include it="${it.build}" page="sidepanel.jelly" />
         <l:main-panel>
-            <h1>${%Title}</h1>
-            <st:out value="${it.data}"/><br />
-            SampleAction/index.jelly
+            urlparam:<st:out value="${it.token}"/><br />
+            SampleReport2/index.jelly<br />
         </l:main-panel>
     </l:layout>
 </j:jelly>

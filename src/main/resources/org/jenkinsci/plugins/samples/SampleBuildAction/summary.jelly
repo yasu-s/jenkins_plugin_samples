@@ -4,7 +4,7 @@
          xmlns:t="/lib/hudson"
          xmlns:f="/lib/form"
          xmlns:i="jelly:fmt">
-    <t:summary icon="document.gif">
-        SampleAction/summary.jelly
+    <t:summary icon="notepad.png">
+        SampleBuildAction/summary.jelly
     </t:summary>
 </j:jelly>
